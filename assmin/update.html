@@ -1,0 +1,248 @@
+<html>
+<head>
+    <title>Update ảnh từ The Wallpaper</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#go").click(function () {
+                var text = $("#url option:selected").text();
+                var text2 = $("#folder option:selected").text();
+                if (text === text2)
+                    $("#get").show("slow");
+                else
+                    prompt("Sai roi kia");
+            });
+        });
+    </script>
+</head>
+<body>
+
+<h3>Get Images</h3>
+
+<form method="post" action="update.php">
+    <!--<p>Link dạng: <em>http://thepaperwall.com/category.php?action=catcontent&c=0&t=&r=&l=200&cat=b9852f3cb23163976c69d3587f43e4ad5ecbdf2f</em></p>
+    <p>URL: <input type="text" name="url" class="url" size="40"></p>-->
+    <p>Category <select name="url" id="url">
+        <option value='' selected>None</option>
+        <option value="http://thepaperwall.com/category.php?action=catcontent&c=0&l=20&cat=97ae48254c8b6f5ebc1cd28d498b522652e1fb6f">
+            Animals
+        </option>
+        <option value="http://thepaperwall.com/category.php?action=catcontent&c=0&l=20&cat=1908ef97b29529db21aea7748289e1e9e7a07f5c">
+            Architechture
+        </option>
+        <option value="http://thepaperwall.com/category.php?action=catcontent&c=0&l=20&cat=c82ac345f52aeeb0d8afdce734166747fce53541">
+            Bikes
+        </option>
+        <option value="http://thepaperwall.com/category.php?action=catcontent&c=0&l=20&cat=8a8dfa2a2b7efe842f886c707d1af7ea54eb0f04">
+            Cars
+        </option>
+        <option value="http://thepaperwall.com/category.php?action=catcontent&c=0&l=20&cat=f8bfa9dc486502000c40688173928ba3ac276806">
+            Cartoon
+        </option>
+        <option value="http://thepaperwall.com/category.php?action=catcontent&c=0&l=20&cat=8bdd7bd2e50218e0113c31081d82d61af1487f86">
+            CityScape
+        </option>
+        <option value="http://thepaperwall.com/category.php?action=catcontent&c=0&l=20&cat=da9dbb19af79ba9727f82a45d07e31e1902efdfe">
+            Computer
+        </option>
+        <option value="http://thepaperwall.com/category.php?action=catcontent&c=0&l=20&cat=6428f62b9f30541d074dd6dc396e4ed512295d20">
+            Digital/Art
+        </option>
+        <option value="http://thepaperwall.com/category.php?action=catcontent&c=0&l=20&cat=9341a3a4c9acf6aa892f31119b43197a8ead2d6d">
+            Fantasy
+        </option>
+        <option value="http://thepaperwall.com/category.php?action=catcontent&c=0&l=20&cat=7ad3e0b00865cef25d6a4cf2ac4f4a0203b0f01b">
+            Food/Drink
+        </option>
+        <option value="http://thepaperwall.com/category.php?action=catcontent&c=0&l=20&cat=b9852f3cb23163976c69d3587f43e4ad5ecbdf2f">
+            Girls
+        </option>
+        <option value="http://thepaperwall.com/category.php?action=catcontent&c=0&l=20&cat=66081351108b1d3ff5be77ce8980094cdb64cb08">
+            Guns
+        </option>
+        <option value="http://thepaperwall.com/category.php?action=catcontent&c=0&l=20&cat=9e4ec607f5e4b911f3fecfc7a512dd4132845376">
+            Holiday
+        </option>
+        <option value="http://thepaperwall.com/category.php?action=catcontent&c=0&l=20&cat=42cd11957e1833eda69ea8c1194265b5a65cd73b">
+            Humor
+        </option>
+        <option value="http://thepaperwall.com/category.php?action=catcontent&c=0&l=20&cat=ff0cc7802169849597065a7717833987d8dd3639">
+            Industrial
+        </option>
+        <option value="http://thepaperwall.com/category.php?action=catcontent&c=0&l=20&cat=d80a5db3f1d6a90a683f4b3bb7e108f44b863c2d">
+            Informational
+        </option>
+        <option value="http://thepaperwall.com/category.php?action=catcontent&c=0&l=20&cat=8bf032c27bdac9576b07e41cfb06fb4094ed0a91">
+            Insect
+        </option>
+        <option value="http://thepaperwall.com/category.php?action=catcontent&c=0&l=20&cat=906e00bfaccd6138901f335da19aadc45703b146">
+            Mobile
+        </option>
+        <option value="http://thepaperwall.com/category.php?action=catcontent&c=0&l=20&cat=bdb0a973c81e1660554e14a3160fa7a7bb68c026">
+            Love
+        </option>
+        <option value="http://thepaperwall.com/category.php?action=catcontent&c=0&l=20&cat=ea5e4f09756e6c08976b38baa94078901b0e957a">
+            Misc
+        </option>
+        <option value="http://thepaperwall.com/category.php?action=catcontent&c=0&l=20&cat=8bd3e724702a32ef4679dd6d0a6b7c27025f8372">
+            Movie
+        </option>
+        <option value="http://thepaperwall.com/category.php?action=catcontent&c=0&l=20&cat=a09d9bb46ff5d472b1dc0fa9f1db346deb818d4d">
+            Music
+        </option>
+        <option value="http://thepaperwall.com/category.php?action=catcontent&c=0&l=20&cat=0bcd9385efa3d6e5f7770df57bbbbb31ad0ea22a">
+            Nature
+        </option>
+        <option value="http://thepaperwall.com/category.php?action=catcontent&c=0&l=20&cat=865f174e89f243c3cea6503dfa417f73c7641edb">
+            People
+        </option>
+        <option value="http://thepaperwall.com/category.php?action=catcontent&c=0&l=20&cat=0d070b33f42daa623b094cac92398e0270969681">
+            Quote
+        </option>
+        <option value="http://thepaperwall.com/category.php?action=catcontent&c=0&l=20&cat=330dcff84dd4f4a72302bd9ca15ecd3bdcb19af2">
+            Scifi
+        </option>
+        <option value="http://thepaperwall.com/category.php?action=catcontent&c=0&l=20&cat=be42faa61e0ec05f65b3d4c1a5eb47fb1b7ce9a4">
+            Science
+        </option>
+        <option value="http://thepaperwall.com/category.php?action=catcontent&c=0&l=20&cat=98020701bc0956f200825e301acabbf8a9b51254">
+            Space
+        </option>
+        <option value="http://thepaperwall.com/category.php?action=catcontent&c=0&l=20&cat=6cc6b80bb685e537dc2e47a8d6e07e61efcd8bea">
+            Sport
+        </option>
+        <option value="http://thepaperwall.com/category.php?action=catcontent&c=0&l=20&cat=8f370355f4b6a4a01c35d62a39f36d5eda94b8d8">
+            Television
+        </option>
+        <option value="http://thepaperwall.com/category.php?action=catcontent&c=0&l=20&cat=62bd7ee3dcffed15e0817808182c923c010cf6c2">
+            Video Games
+        </option>
+        <option value="http://thepaperwall.com/category.php?action=catcontent&c=0&l=20&cat=8e0878c979be37dac22c03aa7e44102a0b657d0b">
+            Vintage
+        </option>
+        <option value="http://thepaperwall.com/category.php?action=catcontent&c=0&l=20&cat=969b3881d7010b3aaeb2b7f9281bd73fe66b77ae">
+            War
+        </option>
+    </select>
+    </p>
+    <p>Folder: <select name="folder" id="folder">
+        <option value='' selected>
+            None
+        </option>
+        <option value="Animals">
+            Animals
+        </option>
+        <option value="Architecture">
+            Architechture
+        </option>
+        <option value="Bikes">
+            Bikes
+        </option>
+        <option value="Cars">
+            Cars
+        </option>
+        <option value="Cartoon_Comic">
+            Cartoon
+        </option>
+        <option value="CityScape">
+            CityScape
+        </option>
+        <option value="Computer_Tech">
+            Computer
+        </option>
+        <option value="Digital_Artwork">
+            Digital/Art
+        </option>
+        <option value="Fantasy">
+            Fantasy
+        </option>
+        <option value="Food_Drink">
+            Food/Drink
+        </option>
+        <option value="Girls">
+            Girls
+        </option>
+        <option value="Guns">
+            Guns
+        </option>
+        <option value="Holiday">
+            Holiday
+        </option>
+        <option value="Humor">
+            Humor
+        </option>
+        <option value="Industrial">
+            Industrial
+        </option>
+        <option value="Informational">
+            Informational
+        </option>
+        <option value="Insect">
+            Insect
+        </option>
+        <option value="Mobile">
+            Mobile
+        </option>
+        <option value="Love_Hate">
+            Love
+        </option>
+        <option value="Misc">
+            Misc
+        </option>
+        <option value="Movie">
+            Movie
+        </option>
+        <option value="Music">
+            Music
+        </option>
+        <option value="Nature">
+            Nature
+        </option>
+        <option value="People">
+            People
+        </option>
+        <option value="Quotes_Words">
+            Quote
+        </option>
+        <option value="SciFi">
+            Scifi
+        </option>
+        <option value="Science">
+            Science
+        </option>
+        <option value="Space">
+            Space
+        </option>
+        <option value="Sport">
+            Sport
+        </option>
+        <option value="Television">
+            Television
+        </option>
+        <option value="Video_Games">
+            Video Games
+        </option>
+        <option value="Vintage">
+            Vintage
+        </option>
+        <option value="War">
+            War
+        </option>
+    </select></p>
+    <p>Chú ý folder phải giống tên category</p>
+
+    <p>From page: <input type="text" name="from" class="from" size="5"> - To page: <input type="text" name="to"
+                                                                                          class="to" size="5"></p>
+
+    <p>Password: <input type="text" name="password" class="password" size="20"></p>
+    <input type="hidden" value="getimages" name="type">
+
+    <p>Buoc 1: <input type="button" id="go" value="Check"/></p>
+    <br/><br/><br/>
+
+    <p>Buoc 2: <input type="submit" value="Get" id="get" style="display:none;"></p>
+
+</form>
+</body>
+</html>

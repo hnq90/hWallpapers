@@ -1,0 +1,74 @@
+﻿hWallpapers - Auto Download and Generate
+
+#### Version 0.1 - 14/02/2013 ####
+	Initial
+	- Trang get.php
+	- Trang function.php
+	- Trang index.php view ảnh trong cả 1 folder.
+	- Get 10 category đầu.
+
+#### Version 0.2 - 14/02/2013 ####
+	Lên được 0.2 rồi :D
+	- Tối ưu lại phần list link ảnh.
+	- Trang index.html để show các link vào folder.
+	- Thêm css cho index.php ở các folder cho dễ nhìn.
+	- Lấy $limit từ $_GET
+	- Lấy giá trị các tag trong head ở html từ php.
+	- Lấy current URL.
+	- Get 10 category tiếp.
+
+#### Version 0.3 - 15/02/2013 ####
+	Đi chơi, không làm gì, lên version luôn :D 
+
+#### Version 0.5 - 16/02/2013 ####
+	Sửa nhiều thứ nhưng không nhớ, lên luôn 0.5 >_<
+	- Làm giao diện mới, css từ x.huynq.net
+	- Responsive layout.
+	- Sửa lại pagination.
+	- Get nốt 13 category.
+	
+#### Version 0.6 - 16/02/2013 ####
+	Layout
+	- Làm lại giao diện, dùng bootstrap.
+	- Tối ưu lại phần đưa link ảnh vào mảng.
+	- Sắp xếp ảnh bằng "last modified".
+	- Get 13 pack về.
+
+#### Version 0.7 - 16/02/2013 ####
+	Làm đêm 1
+	- Dùng chung 1 index cho tất cả các category.
+	- Làm trang home.
+	- Responsive layout.
+	- Phân chia ra làm nhiều module.
+
+#### Version 1.0 - 17/02/2013 ####
+	Làm đêm 2, lên 1.0 cho phấn khởi >:)
+	- Thêm "last update".
+	- Include lỗi không hiểu tại sao, nhét chung function vào file get.
+	- Thêm file update.
+	- Làm phần tự cập nhật hình ảnh từ trang chủ.
+	- Làm phần admin.
+
+#### Version 1.1 - 17/02/2013 ####
+	- Hoàn thiện nốt file get và update.
+	- Tối ưu lại get ảnh từ folder và sắp xếp.
+	- Code tạm ổn.
+	Lên luôn 1.1. Mai đi học không có thời gian làm.
+	
+#### Version 1.2 - 18/02/2013 ####
+	Đi thực tập cả ngày :-<
+	- Sửa lại code sort ảnh bằng filemtime với sự trợ giúp của anh ET và thím ếch.
+
+#### Version 1.3 - 23/02/2013 ####
+	Sáng đến trường, chiều thi TOEIC =;
+	- Sửa lại code, thêm view file + download.
+
+################ MISSING FUNCTION ###################
+# - Get tag with image link.                        #
+# - Use database.                                   #
+# - User function.                                  #
+# - Complete Upload function.                       #
+# - View image in one page.                         #
+# - Review sorting arrays.                          #
+# - Review getting images.                          #
+############### MISSING FUNCTION ####################
